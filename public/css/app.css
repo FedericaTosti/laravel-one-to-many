@@ -1,0 +1,21 @@
+body .header,
+body .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .content {
+  min-height: 75vh;
+}
+
+body .content button {
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+body .content span,
+body .content label {
+  font-weight: bold;
+}
+
