@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Task;
 use App\Employee;
+use App\Location;
 
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class TaskController extends Controller
 {
   public function index(){
     $alltasks = Task::all();
-    return view('home', compact("alltasks"));
+    $employees = Employee::all();
+    return view('home', compact("alltasks", "employees"));
   }
 
   public function show($id){
@@ -24,7 +26,8 @@ class TaskController extends Controller
   public function edit($id){
     $task = Task::findOrFail($id);
     $allemployees = Employee::all();
-    return view('editTask', compact("task", "allemployees"));
+    $locations = Location::all();
+    return view('editTask', compact("task", "allemployees", "locations"));
   }
   // per modifica
   public function update(Request $request, $id){

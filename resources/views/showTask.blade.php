@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <h2>Dettagli</h2>
+  <h2>Dettagli task</h2>
 
   @if (session("success"))
     <p>{{session("success")}}</p>
@@ -26,5 +26,7 @@
   <a href="{{route("editTask",$task["id"])}}"><button type="button" name="button">Modifica</button></a>
 
   <a href="{{route("destroyTask", $task["id"])}}"><button type="button" name="button">Elimina</button></a>
+
+  <a href="{{route("showEmployee", $task -> employee -> id )}}"><button type="button" name="button">Dettagli dipendente</button></a>
 
 @endsection

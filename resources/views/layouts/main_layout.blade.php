@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Employee Tasks</title>
+    <title>Employee Tasks Location</title>
 
     <script src="js/app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/app.css">
@@ -22,6 +22,17 @@
       - deadline
   N.B.: naturalmente ad ogni entita' va aggiunto il necessario per le chiavi primarie e le chiavi esterne
   BONUS: creare il necessario anche per eseguire update + delete --}}
+
+  {{-- definire index + edit aggiungendo relazione molti-a-molti tra employee e location. Definire il db come segue:
+    Location <-N---M-> Employee <-1---N-> Task
+    Per ogni location 0, 1 o piu' employee; per ogni employee 0, 1 o piu' location
+    Location:
+    - street
+    - city
+    - state
+  N.B.: Aggiungi tabella ponte tra location e employee
+  BONUS: creare il necessario anche per eseguire update + delete
+  --}}
 
   <body>
     <div class="header">
